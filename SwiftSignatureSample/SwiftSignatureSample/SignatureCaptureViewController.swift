@@ -106,7 +106,7 @@ class SignatureCaptureViewController: UIViewController {
         
         //create a bitmap-based graphics context and makes it the current context
         let imageFrame = signatureImage.frame.size
-        UIGraphicsBeginImageContext(imageFrame)
+        UIGraphicsBeginImageContextWithOptions(signatureImage.frame.size, false, 0.0)
         signatureImage.image?.drawInRect(CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: imageFrame))
         CGContextSetLineCap(UIGraphicsGetCurrentContext(), CGLineCap.Round)
         CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 2.0)
@@ -132,7 +132,8 @@ class SignatureCaptureViewController: UIViewController {
         }
         if !fingerMoved {
             let imageFrame = signatureImage.frame.size
-            UIGraphicsBeginImageContext(imageFrame)
+            UIGraphicsBeginImageContextWithOptions(signatureImage.frame.size, false, 0.0)
+//            UIGraphicsBeginImageContext(imageFrame)
             signatureImage.image?.drawInRect(CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: imageFrame))
             CGContextSetLineCap(UIGraphicsGetCurrentContext(), CGLineCap.Round)
             CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 2.0)
