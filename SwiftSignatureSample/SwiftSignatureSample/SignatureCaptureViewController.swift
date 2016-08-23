@@ -29,7 +29,7 @@ class SignatureCaptureViewController: UIViewController {
         let completionButton = UIButton(frame: saveButtonContainer.frame)
         completionButton.translatesAutoresizingMaskIntoConstraints = false
         completionButton.setAttributedTitle(NSAttributedString(string: "done".uppercaseString, attributes: [NSKernAttributeName : 1.5, NSForegroundColorAttributeName : UIColor.whiteColor()]), forState: UIControlState.Normal)
-        completionButton.addTarget(self, action: Selector("completionButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
+        completionButton.addTarget(self, action: #selector(SignatureCaptureViewController.completionButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         saveButtonContainer.addSubview(completionButton)
         //constraints for the completion button
         let horizontalCenteringConstraint = NSLayoutConstraint(item: completionButton, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: saveButtonContainer, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
