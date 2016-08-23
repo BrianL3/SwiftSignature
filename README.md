@@ -20,6 +20,7 @@ The purpose of this project is to have an easy signature-capture library that ca
 * When the user is done, they will press the completion button on the SignatureCaptureViewController, which calls the delegate's signatureCaptured method, passing the user's signature back to the originating view controller.
 
 * This means that the originating ViewController must comply with the SignatureCaptureDelegate protocol, which is very easy.  Just add one method: signatureCaptured.  That method does... whatever you want to do with the captured signature.  Save it to a file?  Convert it to PDF?  Post it to your API?  Bake it in a pie?  The world is your oyster, or indeed the mollusk of your choice.
+
 ![Image of Delegate Method](http://i.imgur.com/EVQSRxU.png)
 
 ######What is the MIT license?
